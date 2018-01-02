@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="account"><br>
+    <input type="password" name="password"><br>
+    <input type="text" name="virfy" > <img src="/virfy/" width="100" height="40" onclick="change(this)"><br>
+    <input type="submit">
+    <script>
+        function change(img) {
+           img.src='/virfy/?time='+new Date().getTime()
+        }
+    </script>
+</form>
+
+</body>
+</html>
